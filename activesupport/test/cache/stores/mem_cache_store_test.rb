@@ -25,6 +25,7 @@ class MemCacheStoreTest < ActiveSupport::TestCase
     @cache.clear
     @cache.silence!
     @cache.logger = ActiveSupport::Logger.new(File::NULL)
+    @increment_and_decrement_support_initialization = true
   end
 
   include CacheStoreBehavior

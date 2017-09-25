@@ -8,6 +8,7 @@ class MemoryStoreTest < ActiveSupport::TestCase
   def setup
     @record_size = ActiveSupport::Cache.lookup_store(:memory_store).send(:cached_size, 1, ActiveSupport::Cache::Entry.new("aaaaaaaaaa"))
     @cache = ActiveSupport::Cache.lookup_store(:memory_store, expires_in: 60, size: @record_size * 10 + 1)
+    @increment_and_decrement_support_initialization = false
   end
 
   include CacheStoreBehavior

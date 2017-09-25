@@ -14,6 +14,7 @@ class FileStoreTest < ActiveSupport::TestCase
 
     @buffer = StringIO.new
     @cache.logger = ActiveSupport::Logger.new(@buffer)
+    @increment_and_decrement_support_initialization = false
   end
 
   def teardown

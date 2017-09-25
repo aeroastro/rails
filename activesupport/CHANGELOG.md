@@ -1,3 +1,9 @@
+*   Fix value initialization by increment/decrement of ActiveSupport::Cache::MemCacheStore
+
+    This 
+
+    *Takumasa Ochi*
+
 *   Add key rotation support to `MessageEncryptor` and `MessageVerifier`
 
     This change introduces a `rotate` method to both the `MessageEncryptor` and
