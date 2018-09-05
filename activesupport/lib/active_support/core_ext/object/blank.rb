@@ -127,6 +127,8 @@ class String
         BLANK_RE.match?(self)
       rescue Encoding::CompatibilityError
         ENCODED_BLANKS[self.encoding].match?(self)
+      rescue ArgumentError
+        false
       end
   end
 end
